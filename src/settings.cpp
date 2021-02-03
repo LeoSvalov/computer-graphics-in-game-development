@@ -19,7 +19,7 @@ std::shared_ptr<settings> cg::settings::parse_settings(int argc, char** argv)
 	add_options(
 		"model_path", "Path to OBJ model",
 		cxxopts::value<std::filesystem::path>()->default_value(
-			"models/z_test.obj"));
+			"models/cube.obj"));
 	add_options(
 		"camera_position", "Camera position",
 		cxxopts::value<std::vector<float>>()->default_value("0.0,1.0,5.0"));
@@ -36,7 +36,7 @@ std::shared_ptr<settings> cg::settings::parse_settings(int argc, char** argv)
 		cxxopts::value<float>()->default_value("100.0"));
 	add_options(
 		"result_path", "Path to resulted image",
-		cxxopts::value<std::filesystem::path>()->default_value("result.png"));
+		cxxopts::value<std::filesystem::path>()->default_value("output/result.png"));
 	add_options(
 		"accumulation_num", "Number of accumulated frames",
 		cxxopts::value<unsigned>()->default_value("4"));
